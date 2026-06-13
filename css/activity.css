@@ -33,3 +33,15 @@ img {
 .main-nav a:hover {
     color: rgb(255, 255, 255);
 }
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+.page-header {
+    padding-top: .5rem;
+}
+.align-center {
+    text-align: center;
+}
