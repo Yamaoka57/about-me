@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+html {
+    font-size:100%;
+}
+body {
+    font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif;
+    line-height: 1.7;
+    color: rgb(255, 255, 255);
+    background-image: url(../images/haikei.jpg);
+    background-size: cover;
+    background-color: gray;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 50%;
+}
+.logo {
+    width: 100px;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.3rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.main-nav a {
+    color: rgb(255, 255, 255);
+}
+.main-nav a:hover {
+    color: rgb(255, 255, 255);
+}
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+.page-header {
+    padding-top: .5rem;
+}
+.align-center {
+    text-align: center;
+}
+.cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
