@@ -45,3 +45,8 @@ img {
 .align-center {
     text-align: center;
 }
+.cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
