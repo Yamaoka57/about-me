@@ -17,3 +17,19 @@ a {
 img {
     max-width: 50%;
 }
+.logo {
+    width: 100px;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.3rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.main-nav a {
+    color: rgb(255, 255, 255);
+}
+.main-nav a:hover {
+    color: rgb(255, 255, 255);
+}
