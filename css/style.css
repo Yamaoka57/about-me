@@ -7,7 +7,7 @@ body {
     font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif;
     line-height: 1.7;
     color: rgb(255, 255, 255);
-    background-image: url(images/haikei.jpg);
+    background-image: url(../images/haikei.jpg);
     background-size: cover;
     background-color: gray;
 }
