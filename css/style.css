@@ -9,6 +9,8 @@ body {
     color: rgb(255, 255, 255);
     background-image: url(../images/haikei.jpg);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     background-color: gray;
 }
 a {
@@ -39,11 +41,11 @@ img {
 }
 .main-nav {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     gap: 2.3rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     list-style: none;
+    text-align: left;
 }
 .main-nav a {
     color: rgb(255, 255, 255);
@@ -56,29 +58,12 @@ img {
     background-position: center bottom;
     height: 800px;
 }
-.prof {
+.home {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    width: 500px;
+    width: 1400px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-}
-.care {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 400px 0px 0px 0px;
-}
-.act {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 200px 0px 0px 0px;
+    font-size: 2.5rem; 
 }

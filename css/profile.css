@@ -9,6 +9,8 @@ body {
     color: rgb(255, 255, 255);
     background-image: url(../images/haikei.jpg);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     background-color: gray;
 }
 a {
@@ -24,7 +26,7 @@ img {
     display: flex;
     justify-content: center;
     gap: 2.3rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     list-style: none;
 }
 .main-nav a {
@@ -49,4 +51,13 @@ img {
     background-size: cover;
     background-position: center bottom;
     height: 800px;
+}
+.prof {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 1400px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem; 
 }
