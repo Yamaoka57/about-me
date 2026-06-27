@@ -38,6 +38,8 @@ img {
     width: 100px;
 }
 .main-nav {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 2.3rem;
     font-size: 1.5rem;
