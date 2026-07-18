@@ -1,17 +1,41 @@
 @charset "UTF-8";
 
+:root {
+    --body-text: #f8fafc;
+    --panel-bg: rgba(15, 23, 42, 0.8);
+    --panel-text: #f8fafc;
+    --muted-text: #cbd5e1;
+    --nav-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    --accent: #38bdf8;
+}
+
+body[data-theme="light"] {
+    --body-text: #0f172a;
+    --panel-bg: rgba(255, 255, 255, 0.9);
+    --panel-text: #0f172a;
+    --muted-text: #475569;
+    --nav-color: #f8fafc;
+    --border-color: rgba(15, 23, 42, 0.12);
+    --shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
+    --accent: #2563eb;
+}
+
 html {
-    font-size:100%;
+    font-size: 100%;
 }
 body {
     font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif;
     line-height: 1.7;
-    color: rgb(255, 255, 255);
-    background-image: url(../images/haikei.jpg);
+    color: var(--body-text);
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.75), rgba(30, 41, 59, 0.7)), url(../images/haikei.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-color: gray;
+    min-height: 100vh;
+    transition: color 0.3s ease, background-image 0.3s ease;
 }
 a {
     text-decoration: none;
@@ -36,8 +60,28 @@ img {
 .page-header {
     padding-top: .5rem;
 }
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 .logo {
     width: 100px;
+}
+.theme-toggle {
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--nav-color);
+    padding: 0.6rem 0.9rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
 }
 .main-nav {
     display: flex;
@@ -47,28 +91,31 @@ img {
     list-style: none;
 }
 .main-nav a {
-    color: rgb(255, 255, 255);
+    color: var(--nav-color);
 }
 .main-nav a:hover {
-    color: rgb(255, 255, 255);
+    color: var(--accent);
 }
 .cover {
     background-size: cover;
     background-position: center bottom;
-    height: 800px;
+    min-height: 800px;
+    padding-bottom: 3rem;
 }
 .home {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.55);
-    width: min(90%, 720px);
+    background-color: var(--panel-bg);
+    color: var(--panel-text);
+    width: min(90%, 820px);
     margin: 2rem auto 0;
     padding: 2rem 2.5rem;
-    border-radius: 20px;
+    border-radius: 24px;
     font-size: 1.15rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
-.home h2 {
+.home h2, .skills-section h3, .info-card h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -76,4 +123,82 @@ img {
 .home p {
     margin-bottom: 0.8rem;
     line-height: 1.8;
+    color: var(--muted-text);
+}
+
+.home-intro {
+    margin-bottom: 1.5rem;
+}
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 1.5rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-color);
+    padding: 1.2rem;
+    border-radius: 16px;
+}
+
+.skills-section {
+    text-align: left;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(148, 163, 184, 0.25);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), #60a5fa);
+    transition: width 0.8s ease;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 1rem 1.3rem;
+        font-size: 1.8rem;
+    }
+
+    .home {
+        padding: 1.5rem 1.2rem;
+    }
 }

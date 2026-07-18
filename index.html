@@ -12,9 +12,12 @@
     <body>
     <div class="cover cover-home">
         <header class="page-header">
-            <h1 class="align-center">
-                <a href="index.html"><img class="logo" src="images/logo.jpg" alt="ロゴ"></a>
-            </h1>
+            <div class="header-top">
+                <h1 class="align-center">
+                    <a href="index.html"><img class="logo" src="images/logo.jpg" alt="ロゴ"></a>
+                </h1>
+                <button class="theme-toggle" type="button" aria-label="ダークモード切替">🌙</button>
+            </div>
             <h2 class="page-title font-english">自己紹介</h2>
             <nav>
                 <ul class="main-nav font-english">
@@ -27,12 +30,26 @@
             </nav>
         </header>
         <section class="home">
-            <h2>HOME</h2>
-            <p>初めまして。山岡悠真です。</p>
-            <p>ここでは私の自己紹介をしています。</p>
-            <p>興味のある方はぜひご覧ください。</p>
-            <p>何かあればcontactページからお気軽にご連絡ください。</p>
+            <div class="home-intro reveal">
+                <h2>HOME</h2>
+                <p>初めまして。山岡悠真です。</p>
+                <p>ここでは私の自己紹介をしています。</p>
+                <p>興味のある方はぜひご覧ください。</p>
+                <p>何かあればcontactページからお気軽にご連絡ください。</p>
+            </div>
+
+            <div class="home-grid">
+                <article class="info-card reveal">
+                    <h3>About</h3>
+                    <p>Web制作やデザインに関心があり、ユーザーに伝わる表現を大切にしています。</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Focus</h3>
+                    <p>レスポンシブ対応と、自然に見える動きづくりを意識して制作しています。</p>
+                </article>
+            </div>
         </section>
     </div>
+    <script src="java.js"></script>
     </body>
 </html>
